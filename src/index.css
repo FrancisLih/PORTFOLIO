@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Roboto-bold';
+  src: url(/fonts/roboto-bold.woff) format("woff"),
+       url(/fonts/roboto-bold.woff2) format("woff2");
+}
+@font-face {
+  font-family: 'Roboto-regular';
+  src: url(/fonts/roboto-regular.woff) format("woff"),
+       url(/fonts/roboto-regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: 'Roboto-medium';
+  src: url(/fonts/roboto-medium.woff) format("woff"),
+       url(/fonts/roboto-medium.woff2) format("woff2");
+}
+
+:root{
+  --primary: 40 16 78 ; /*dark purple */
+  --secondary: 98 55 160 ;/*light purple */
+  --accent: 255 255 255; /*white */
+  --content: 0 0 0;
+}
+
+@layer base{
+  a{
+    @apply text-content
+}
+
+  ul{
+      @apply list-none text-content
+  }
+
+  img{
+      @apply h-auto
+  }
+
+  h1,h2,h3,h4,h5,h5{
+      @apply  text-content 
+  }
+  /* h1{
+      @apply  mb-4
+  }
+  h2{
+      @apply text-xl mb-4
+  }
+  h3{
+      @apply text-lg mb-2
+  }
+  h4{
+      @apply text-base mb-4
+  } */
+  p{
+      @apply mb-2 text-content !leading-6 opacity-60
+  }
+}
+
+@layer components{
+  .btn{
+    @apply px-2 py-1 rounded-md text-sm transition-colors 
+  }
+  .btn--primary{
+    @apply border border-primary rounded-full text-primary hover:bg-primary hover:text-white
+  }
+  .footer {
+    @apply bg-primary p-3
+  }
+  .footer h3{
+    @apply text-white 
+  }
+  .footer ul li{
+    @apply text-white text-2xl
+  }
+}
