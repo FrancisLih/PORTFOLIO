@@ -1,38 +1,88 @@
 import React from 'react'
+import Footer from './Footer'
 
 const Experience = () => {
   return (
-    <div className='text-center'>
-        <h1 className='font-extrabold text-6xl text-secondary'>EXPERIENCE</h1>
-        <div className="Cards grid grid-cols-3">
-            <div className="card p-12">
-                <img src="public/img/html-logo.png" className="w-[150px] mx-auto p-3 hover:shadow-md " alt="" />
-                <h2>HTML</h2>
+    <div id='skills' className='h-screen'>
+        <h1 className='font-extrabold text-center text-6xl text-secondary p-10'>SKILLS</h1>
+        <div className="container mx-auto  grid grid-cols-3 gap-[1rem] justify-center items-center text-center">
+            <div className="skill-box mx-auto  w-[50%]  ">
+                    <div className="skill-title">
+                        <div className="img">
+                            <img src="/img/figma-logo.svg"  className='skill-icon' alt="" />
+                        </div>
+                    <h3 className='p-2 font-semibold'>Figma</h3>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, quo?</p>
             </div>
-            <div className="card p-12">
-                <img src="public/img/css-logo.png" className="w-[90px] mx-auto p-3 hover:shadow-md" alt="" />
-                <h2>CSS3</h2>
+            <div className="skill-box mx-auto w-[50%]">
+                    <div className="skill-title">
+                        <div className="img">
+                            <img src="/img/html-logo.svg"  className='skill-icon' alt="" />
+                        </div>
+                    <h3 className='p-2 font-semibold'>HTML</h3>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, quo?</p>
             </div>
-            <div className="card p-12">
-                <img src="public/img/react-logo.png" className="w-[130px] mx-auto p-3 hover:shadow-md" alt="" />
-                <h2>React.JS</h2>
+            <div className="skill-box mx-auto w-[50%]">
+                    <div className="skill-title">
+                        <div className="img">
+                            <img src="/img/css-logo.svg"  className='skill-icon' alt="" />
+                        </div>
+                    <h3 className='p-2 font-semibold'>CSS</h3>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, quo?</p>
             </div>
-            <div className="card p-12">
-                <img src="public/img/tailwind-logo.png" className="w-[130px] mx-auto p-3 hover:shadow-md" alt="" />
-                <h2>Tailwind</h2>
+            <div className="skill-box mx-auto w-[50%]">
+                    <div className="skill-title">
+                        <div className="img">
+                            <img src="/img/sass-logo.svg"  className='skill-icon' alt="" />
+                        </div>
+                    <h3 className='p-2 font-semibold'>SCSS</h3>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, quo?</p>
             </div>
-            <div className="card p-12">
-                <img src="public/img/wp-logo.png" className="w-[200px] mx-auto p-3 hover:shadow-md" alt="" />
-                <h2>WordPress</h2>
+            <div className="skill-box mx-auto w-[50%]">
+                    <div className="skill-title">
+                        <div className="img">
+                            <img src="/img/tailwind-logo.svg"  className='skill-icon' alt="" />
+                        </div>
+                    <h3 className='p-2 font-semibold'>Tailwind</h3>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, quo?</p>
             </div>
-            <div className="card p-12">
-                <img src="public/img/PhpMyAdmin-logo.png" className="w-[130px] mx-auto p-3 hover:shadow-md" alt="" />
-                <h2>MySQL Database</h2>
+            <div className="skill-box mx-auto w-[50%]">
+                    <div className="skill-title">
+                        <div className="img">
+                            <img src="/img/react-logo.svg"  className='skill-icon' alt="" />
+                        </div>
+                    <h3 className='p-2 font-semibold'>React.JS</h3>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, quo?</p>
             </div>
-           
+            <div className="skill-box mx-auto w-[50%]">
+                    <div className="skill-title">
+                        <div className="img">
+                            <img src="/img/wordpress-logo.svg"  className='skill-icon' alt="" />
+                        </div>
+                    <h3 className='p-2 font-semibold'>Wordpress</h3>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, quo?</p>
+            </div>
+            <div className="skill-box mx-auto w-[50%]">
+                    <div className="skill-title">
+                        <div className="img">
+                            <img src="/img/mysql-logo.svg"  className='skill-icon' alt="" />
+                        </div>
+                    <h3 className='p-2 font-semibold'>MySQL</h3>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, quo?</p>
+            </div>
             
         </div>
+        <Footer/>
     </div>
+    
   )
 }
 

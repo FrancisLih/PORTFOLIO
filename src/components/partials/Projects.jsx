@@ -1,31 +1,38 @@
 import React from 'react'
+import Works from '../showcase/Works'
+import Certificate from '../showcase/Certificate'
+import Badges from '../showcase/Badges'
 
 const Projects = () => {
+
+  const [showTab, setShowTab] = React.useState('certificate')
+  const [isModalShow, setModalShow] = React.useState(false);
+  const handleChangeTab = (tab) =>{
+    setShowTab(tab)
+}
   return (
-
-    <div className='project'>
-      <h1 className='text-center'>PORTFOLIO</h1>
-
-      <ul className='flex gap-10 justify-center'>
-        <li><button>Works</button></li>
-        <li><button>Certificates</button> </li>
+    <>
+    <div id='portfolio' className='project p-5'>
+      <h6 className='text-center font-extrabold text-6xl text-secondary'>PORTFOLIO</h6>
+      <ul className='flex gap-10 justify-center font-thin p-5'>
+        <li><button className={`font-bold ${showTab=="works" ? "text-primary" :"" }`} onClick={() => handleChangeTab("works")}>Project</button></li>
+        <li><button className={`font-bold ${showTab=="certificate" ? "text-primary" :"" }`} onClick={() => handleChangeTab("certificate")}>Certificates</button> </li>
+        <li><button className={`font-bold ${showTab=="badge" ? "text-primary" :"" }`} onClick={() => handleChangeTab("badge")}>Badge</button> </li>
       </ul>
 
-      <div className="cards">
-
-          <div className="">
-              <div className="card">
-                <img src="https://via.placeholder.com/300x200" alt="" />
-                <h1>Work 1</h1>
-                <h2>Lorem ipsum dolor sit amet consectetur.</h2>
-              </div>
-
-            </div>
-            
-      </div>
-
     </div>
+
+    <div>
+      {showTab === "works" &&<Works setModalShow ={setModalShow}/>}
+      {showTab === "certificate" &&<Certificate setModalShow ={setModalShow}/>}
+      {showTab === "badge" &&<Badges setModalShow ={setModalShow}/>}
+    </div>
+
+    {isModalShow &&  <ModalViewItem setModalShow={setModalShow}/>}
+
+    </>
   )
+  
 }
 
 export default Projects

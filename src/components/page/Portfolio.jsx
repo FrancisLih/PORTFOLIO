@@ -12,9 +12,9 @@ const Portfolio = () => {
     <Header/>
     <Banner/>
     <About/>
-    {/* <Projects/> */}
+    <Projects/>
     <Experience/>
-    <Footer/>
+  
     </>
   )
 }

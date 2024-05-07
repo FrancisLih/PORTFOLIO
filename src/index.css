@@ -23,6 +23,7 @@
   --secondary: 98 55 160 ;/*light purple */
   --accent: 255 255 255; /*white */
   --content: 0 0 0;
+  --icon:246 248 252;
 }
 
 @layer base{
@@ -33,17 +34,16 @@
   ul{
       @apply list-none text-content
   }
-
+/* 
   img{
       @apply h-auto
-  }
+  } */
 
   h1,h2,h3,h4,h5,h5{
       @apply  text-content 
   }
-  /* h1{
-      @apply  mb-4
-  }
+   
+  /*
   h2{
       @apply text-xl mb-4
   }
@@ -56,6 +56,37 @@
   p{
       @apply mb-2 text-content !leading-6 opacity-60
   }
+
+  .img{
+    @apply w-[90px] h-[90px] mx-auto relative rounded-full bg-slate-300 flex justify-center items-center transition-[0.5s]
+  }
+  .img:after{
+    @apply content-[''] absolute top-0 left-0 w-[50%] h-[90px] bg-icon rounded-[45px_0_0_45px] opacity-30
+  }
+  .skill-title:after{
+    @apply content-[''] absolute bottom-0 right-[50%] w-0 h-[4px] rounded-[2px_0_0_2px] transition-[0.5s] bg-secondary
+  }
+  .skill-title:before{
+    @apply content-[''] absolute bottom-0 left-[50%] w-0 h-1 rounded-[0_2px_2px_0] transition-[0.5s] bg-secondary
+  }
+  .skill-title{
+    @apply flex flex-col items-center p-[0.5rem] mb-[0.5rem] relative
+  }
+  .skill-box{
+    @apply p-[1rem] cursor-pointer
+  }
+
+  .skill-box:hover > .skill-title:after, .skill-box:hover > .skill-title:before{
+    @apply w-[35px]
+  }
+
+  .skill-box:hover .img{
+    @apply -translate-y-2.5
+  }
+  .skill-icon{
+    @apply w-[50px] 
+  }
+  
 }
 
 @layer components{
@@ -64,6 +95,9 @@
   }
   .btn--primary{
     @apply border border-primary rounded-full text-primary hover:bg-primary hover:text-white
+  }
+  .btn--secondary{
+    @apply bg-primary rounded-full text-white hover:bg-white border border-primary hover:text-primary
   }
   .footer {
     @apply bg-primary p-3
@@ -74,4 +108,28 @@
   .footer ul li{
     @apply text-white text-2xl
   }
+  h5::after{
+    @apply inline-block relative content-[''] bg-primary w-[19rem] h-[.2rem] bottom-5 left-4 
+  }
+  h6::after{
+    @apply 2xl:inline-block relative content-[''] bg-primary w-[19rem] h-[.2rem] bottom-5 left-4 xs:hidden
+  }
+  h6::before{
+    @apply 2xl:inline-block relative content-[''] bg-primary w-[19rem] h-[.2rem] bottom-5 right-4 xs:hidden
+  }
+  .nav-link{
+    @apply text-primary font-light hover:border-b-4 hover:border-primary hover:transition-all
+  }
+  
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--primary); }
 }

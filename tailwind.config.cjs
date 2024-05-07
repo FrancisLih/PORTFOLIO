@@ -3,12 +3,21 @@ export default {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      screens: {
+        'xs': '490px',
+        'sm': '576px',
+        'md': '768px',
+        'lg': '992px',
+        'xl': '1200px',
+        '2xl': '1400px',
+      },
       colors: {
         primary: 'rgb(var(--primary) / <alpha-value>)',
         secondary: 'rgb(var(--secondary) / <alpha-value>)',
         accent: 'rgb(var(--accent) / <alpha-value>)',
         content: 'rgb(var(--content) / <alpha-value>)',
         line:'rgb(var(--line) / <alpha-value>)',
+        icon:'rgb(var(--icon) / <alpha-value>)',
       },
 
       backgroundColor: {
@@ -16,6 +25,7 @@ export default {
         secondary: 'rgb(var(--secondary) / <alpha-value>)',
         accent: 'rgb(var(--accent) / <alpha-value>)',
         content: 'rgb(var(--content) / <alpha-value>)',
+        icon: 'rgb(var(--icon) / <alpha-value>)',
       },
 
       fill: {
@@ -23,6 +33,7 @@ export default {
         secondary: 'var(--secondary)',
         accent: 'var(--accent)',
         content: 'var(--content)',
+        icon: 'var(--icon)',
       },
 
       gridTemplateColumns: {

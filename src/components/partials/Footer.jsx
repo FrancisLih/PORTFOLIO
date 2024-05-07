@@ -8,12 +8,12 @@ const Footer = () => {
     <div className='footer flex justify-between items-center'>
       
       <div>
-        <h1 className=''>Contact</h1>
-        <h4 className='flex  items-center '><FaMapPin /> 1-024 J.V Quesada St. Ibaba del sur Paete, Laguna</h4>
+        <h1 className='text-white'>Contact</h1>
+        <h4 className='flex  items-center text-white'><FaMapPin /> 1-024 J.V Quesada St. Ibaba del sur Paete, Laguna</h4>
       </div>
 
       <div>
-        <h3 className='flex gap-2 items-center '><MdAlternateEmail className='font-semibold'/>francislihdnavarro@gmail.com</h3>
+        <h3 className='flex gap-1 items-center '><MdAlternateEmail className='font-semibold'/>francislihdnavarro@gmail.com</h3>
       </div>
 
       <ul className='flex gap-4 items-center'>
