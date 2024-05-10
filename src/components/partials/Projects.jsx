@@ -15,7 +15,7 @@ const Projects = () => {
     <div id='portfolio' className='project p-5'>
       <h6 className='text-center font-extrabold text-6xl text-secondary'>PORTFOLIO</h6>
       <ul className='flex gap-10 justify-center font-thin p-5'>
-        <li><button className={`font-bold ${showTab=="works" ? "text-primary" :"" }`} onClick={() => handleChangeTab("works")}>Project</button></li>
+        <li><button className={`font-bold ${showTab=="works" ? "text-primary" :"" }`} onClick={() => handleChangeTab("works")}>Projects</button></li>
         <li><button className={`font-bold ${showTab=="certificate" ? "text-primary" :"" }`} onClick={() => handleChangeTab("certificate")}>Certificates</button> </li>
         <li><button className={`font-bold ${showTab=="badge" ? "text-primary" :"" }`} onClick={() => handleChangeTab("badge")}>Badge</button> </li>
       </ul>

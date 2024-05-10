@@ -86,7 +86,12 @@
   .skill-icon{
     @apply w-[50px] 
   }
-  
+  .firstName{
+    @apply font-thin text-6xl overflow-hidden whitespace-nowrap tracking-[0.15em] animate-[typing_3.5s_steps(40,end),blink-caret_0.75s_step-end_infinite] mx-auto my-0 border-r-[0.15em] border-r-primary border-solid
+  }
+  .card{
+    @apply aspect-[6/7] object-cover transition-transform duration-[1s] hover:rotate-[4deg] hover:scale-125
+  }
 }
 
 @layer components{

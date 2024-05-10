@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <header className='header  p-10  '>
+    <header className='header  p-10 '>
         <div className='flex justify-between'>
             <img src="https://via.placeholder.com/80x40" className=' object-cover' alt="" />
 

@@ -5,7 +5,7 @@ import { SiCredly } from 'react-icons/si'
 
 const Footer = () => {
   return (
-    <div className='footer flex justify-between items-center'>
+    <div className='footer flex justify-between items-center rounded-tr-xl rounded-tl-xl'>
       
       <div>
         <h1 className='text-white'>Contact</h1>
